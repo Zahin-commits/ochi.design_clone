@@ -1,8 +1,17 @@
-import { motion as m} from 'framer-motion';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 import React from 'react'
 import { FaArrowUpLong } from "react-icons/fa6";
 
 const LandingPage = () => {
+  useGSAP(()=>{
+    gsap.to("#tag",{
+      width:'8vw',
+      duration:1,
+      ease:'power3.inOut',
+      delay:1.3
+    })
+  })
   return (
     <div data-scroll data-scroll-speed="-.3" className='w-full h-screen bg-zinc-900 pt-1'>
         <div className="textstructure mt-40 px-20">
@@ -10,11 +19,12 @@ const LandingPage = () => {
                 <h1 className='uppercase text-8xl leading-none tracking-tighter font-medium'>WE CREATE</h1>
                 {/* <div className="w-[6vw] h-[5vw]"></div> */}
                 <h1 className='uppercase text-8xl leading-none tracking-tighter font-medium'>
-                <m.div 
-                 initial={{width:"0px"}}
-                 animate={{width:"8vw"}}
-                 transition={{ease: [0.76, 0, 0.24, 1], duration:1}}
-                 className="w-[8vw] h-[5.3vw] relative top-[0.2vw] bg-red-500 inline-block rounded-md"></m.div>
+                <div 
+                //  initial={{width:"0px"}}
+                //  animate={{width:"8vw"}}
+                //  transition={{ease: [0.76, 0, 0.24, 1], duration:1}}
+                 id='tag'
+                 className="w-[0vw] h-[5.3vw] relative top-[0.2vw] bg-[url('https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg')] bg-left bg-cover inline-block rounded-md"></div>
                   Eye Opening</h1>
                 <h1 className='uppercase text-8xl leading-none tracking-tighter font-medium'>Presentation</h1>
             </div>
