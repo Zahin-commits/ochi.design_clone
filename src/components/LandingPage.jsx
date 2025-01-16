@@ -9,7 +9,7 @@ const LandingPage = () => {
       width:'8vw',
       duration:1,
       ease:'power3.inOut',
-      delay:1.3
+      delay:1
     })
   })
   return (
