@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import React, { useEffect, useRef, useState } from 'react'
 import { useWindowScroll } from 'react-use';
 
-const Navbar = () => {
+const Navbar = ({isDark,setIsDark}) => {
     const navRef = useRef(null);
     const [isNavVisible, setIsNavVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0)
@@ -56,6 +56,11 @@ const Navbar = () => {
                     </div>
                 </a>
             ))}
+            <button className='bg-neutral-300 text-zinc-900 dark:text-neutral-300 dark:bg-zinc-900 w-12 h-12 rounded-full absolute top-[50%] -translate-y-1/2 right-3'
+             onClick={()=>{setIsDark(!isDark)}}
+            >
+              {isDark?'DRK':"LIT"}
+            </button>
         </div>
     </div>
   )

@@ -13,9 +13,9 @@ const LandingPage = () => {
     })
   })
   return (
-    <div data-scroll data-scroll-speed="-.3" className='w-full h-screen bg-zinc-900 pt-1'>
+    <div data-scroll data-scroll-speed="-.3" className='w-full h-screen dark:bg-zinc-900 pt-1'>
         <div className="textstructure mt-40 px-20">
-            <div className="masker mt-32">
+            <div className="masker mt-32 dark:text-white">
                 <h1 className='uppercase text-8xl leading-none tracking-tighter font-medium'>WE CREATE</h1>
                 {/* <div className="w-[6vw] h-[5vw]"></div> */}
                 <h1 className='uppercase text-8xl leading-none tracking-tighter font-medium'>
